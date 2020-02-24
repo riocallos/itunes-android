@@ -2,31 +2,32 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.riocallos.itunes">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:name=".base.BaseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme.GradientStatusBar">
         <activity
-            android:name=".ItemListActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:name=".search.views.SearchResultsActivity"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".ItemDetailActivity"
-            android:label="@string/title_item_detail"
-            android:parentActivityName=".ItemListActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:name=".search.views.SearchResultActivity"
+            android:parentActivityName=".search.views.SearchResultsActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.riocallos.itunes.ItemListActivity" />
+                android:value="com.riocallos.itunes.search.views.SearchResultsActivity" />
         </activity>
     </application>
 
