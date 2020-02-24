@@ -1,4 +1,5 @@
 # iTunes Android - Appetiser Apps Coding Challenge
+Demonstrate master detail app using iTunes Search API.
 
 ## APK
 [Download here.](https://drive.google.com/file/d/1E-c_cZM3RHpSFKjMiWF_eYMY0QWawBSH/view?usp=sharing)
