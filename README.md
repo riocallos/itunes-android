@@ -1,5 +1,5 @@
-# iTunes Android - Appetiser Apps Coding Challenge
-Demonstrate master detail app using iTunes Search API.
+# iTunes Android
+Demonstrate master detail app using Kotlin, MVVM, Retrofit, Room, RxJava, Dagger, and Data Binding.
 
 ## APK
 [Download here.](https://drive.google.com/file/d/1E-c_cZM3RHpSFKjMiWF_eYMY0QWawBSH/view?usp=sharing)
