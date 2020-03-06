@@ -20,6 +20,7 @@ import com.riocallos.itunes.R
 import com.riocallos.itunes.base.BaseActivity
 import com.riocallos.itunes.databinding.ActivitySearchResultBinding
 import com.riocallos.itunes.search.viewmodels.SearchResultViewModel
+import com.riocallos.itunes.utils.CacheUtil
 import kotlinx.android.synthetic.main.activity_search_result.*
 import kotlinx.android.synthetic.main.status_action_bar.*
 
@@ -68,11 +69,15 @@ class SearchResultActivity : BaseActivity() {
         }
     }
 
+    override fun onBackPressed() {
+        CacheUtil.invoke(this).saveSearchResult("")
+        NavUtils.navigateUpTo(this, Intent(this, SearchResultsActivity::class.java))
+    }
 
     override fun onOptionsItemSelected(item: MenuItem) =
         when (item.itemId) {
             android.R.id.home -> {
-                NavUtils.navigateUpTo(this, Intent(this, SearchResultsActivity::class.java))
+                onBackPressed()
                 true
             }
             else -> super.onOptionsItemSelected(item)
